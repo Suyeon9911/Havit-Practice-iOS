@@ -134,9 +134,9 @@
 				4D30EFEA2758A69100325DE6 /* HomeItemData.swift */,
 				4D23BC73275E5FD4005D27EE /* PostItemRequest.swift */,
 				4D23BC6F275B8DFE005D27EE /* PostItemResponse.swift */,
-				4D30EFEC2758A6B000325DE6 /* HomeService.swift */,
 				4D30EFEE2758A6C600325DE6 /* GeneralAPI.swift */,
 				4D23BC71275B8F14005D27EE /* PostService.swift */,
+				4D30EFEC2758A6B000325DE6 /* HomeService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";

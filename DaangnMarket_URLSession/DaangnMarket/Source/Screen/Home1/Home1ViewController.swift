@@ -13,7 +13,7 @@ import Moya
 
 class Home1ViewController: UIViewController {
 
-    private let service = MoyaProvider<HomeService>()
+//    private let service = MoyaProvider<HomeService>()
     var itemData: HomeItem?
     private var itemList: [HomeItemData] = []
 
@@ -66,25 +66,25 @@ class Home1ViewController: UIViewController {
         super.viewDidLoad()
         setLayouts()
         setDelegation()
-        getItemData()
+        getHomeItemData()
     }
 
     // Network
-    func getItemData() {
-        service.request(.getItemData) { [weak self] response in
+    func getHomeItemData() {
+        HomeService.shared.fetchItemData { (response) in
             switch response {
-            case .success(let result):
-                do {
-                    self?.itemData = try result.map(HomeItem.self)
-                    self?.itemList = self?.itemData?.data ?? []
-                    print("itemList", self?.itemList ?? [])
-                    self?.tableView.reloadData()
-                } catch(let err) {
-                    print(err.localizedDescription)
+            case .success(let itemData):
+                if let decodedData = itemData as? HomeItem {
+                    self.itemList = decodedData.data
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    return
                 }
-            case .failure(let err):
-                print(err.localizedDescription)
+            case .failure(let itemData):
+                print("fail", itemData)
             }
+
         }
     }
 
