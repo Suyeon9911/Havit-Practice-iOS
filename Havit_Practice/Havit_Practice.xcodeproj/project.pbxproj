@@ -13,9 +13,13 @@
 		4D6F9E032788855E00EC074D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E012788855E00EC074D /* Main.storyboard */; };
 		4D6F9E052788856100EC074D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E042788856100EC074D /* Assets.xcassets */; };
 		4D6F9E082788856100EC074D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E062788856100EC074D /* LaunchScreen.storyboard */; };
+		4D6F9E102788A50800EC074D /* CategoryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E0F2788A50800EC074D /* CategoryListModel.swift */; };
+		4D6F9E122788AD0700EC074D /* CategoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E112788AD0700EC074D /* CategoryTVC.swift */; };
+		9C987CC6D7FED0AB92C038E5 /* Pods_Havit_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F903BA5FB4FF9DBEEAFAB9E3 /* Pods_Havit_Practice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01C1DAF7E1380EDF9FCEB199 /* Pods-Havit_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Havit_Practice.release.xcconfig"; path = "Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice.release.xcconfig"; sourceTree = "<group>"; };
 		4D6F9DF82788855E00EC074D /* Havit_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Havit_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6F9DFB2788855E00EC074D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D6F9DFD2788855E00EC074D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,10 @@
 		4D6F9E042788856100EC074D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D6F9E072788856100EC074D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D6F9E092788856100EC074D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D6F9E0F2788A50800EC074D /* CategoryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListModel.swift; sourceTree = "<group>"; };
+		4D6F9E112788AD0700EC074D /* CategoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTVC.swift; sourceTree = "<group>"; };
+		856B7F58B5EE5E17A048D22C /* Pods-Havit_Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Havit_Practice.debug.xcconfig"; path = "Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice.debug.xcconfig"; sourceTree = "<group>"; };
+		F903BA5FB4FF9DBEEAFAB9E3 /* Pods_Havit_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Havit_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C987CC6D7FED0AB92C038E5 /* Pods_Havit_Practice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				4D6F9DFA2788855E00EC074D /* Havit_Practice */,
 				4D6F9DF92788855E00EC074D /* Products */,
+				50645BDA5C1F3010075E37D8 /* Pods */,
+				F866F173136ED444DA6DDA50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +74,27 @@
 				4D6F9E042788856100EC074D /* Assets.xcassets */,
 				4D6F9E062788856100EC074D /* LaunchScreen.storyboard */,
 				4D6F9E092788856100EC074D /* Info.plist */,
+				4D6F9E0F2788A50800EC074D /* CategoryListModel.swift */,
+				4D6F9E112788AD0700EC074D /* CategoryTVC.swift */,
 			);
 			path = Havit_Practice;
+			sourceTree = "<group>";
+		};
+		50645BDA5C1F3010075E37D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				856B7F58B5EE5E17A048D22C /* Pods-Havit_Practice.debug.xcconfig */,
+				01C1DAF7E1380EDF9FCEB199 /* Pods-Havit_Practice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F866F173136ED444DA6DDA50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F903BA5FB4FF9DBEEAFAB9E3 /* Pods_Havit_Practice.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D6F9E0C2788856100EC074D /* Build configuration list for PBXNativeTarget "Havit_Practice" */;
 			buildPhases = (
+				D3A032483F67D21FC8E59B88 /* [CP] Check Pods Manifest.lock */,
 				4D6F9DF42788855E00EC074D /* Sources */,
 				4D6F9DF52788855E00EC074D /* Frameworks */,
 				4D6F9DF62788855E00EC074D /* Resources */,
+				06539CED9AE7CA48A7FB068F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +165,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06539CED9AE7CA48A7FB068F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3A032483F67D21FC8E59B88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Havit_Practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4D6F9DF42788855E00EC074D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,7 +214,9 @@
 			files = (
 				4D6F9E002788855E00EC074D /* ViewController.swift in Sources */,
 				4D6F9DFC2788855E00EC074D /* AppDelegate.swift in Sources */,
+				4D6F9E122788AD0700EC074D /* CategoryTVC.swift in Sources */,
 				4D6F9DFE2788855E00EC074D /* SceneDelegate.swift in Sources */,
+				4D6F9E102788A50800EC074D /* CategoryListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +360,7 @@
 		};
 		4D6F9E0D2788856100EC074D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856B7F58B5EE5E17A048D22C /* Pods-Havit_Practice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +389,7 @@
 		};
 		4D6F9E0E2788856100EC074D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C1DAF7E1380EDF9FCEB199 /* Pods-Havit_Practice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
