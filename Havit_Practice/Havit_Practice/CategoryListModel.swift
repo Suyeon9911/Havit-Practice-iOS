@@ -18,6 +18,15 @@ struct CategoryListModel {
     init() {
         self.data = [
             Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클"),
+            Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클"),
+            Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클"),
+            Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클"),
+            Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클"),
+            Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클"),
+            Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클"),
+            Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클"),
+            Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클"),
+            Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클"),
             Category(categoryImageName: "category_icon", categoryTitle: "UX/UI 아티클")
         ]
     }
