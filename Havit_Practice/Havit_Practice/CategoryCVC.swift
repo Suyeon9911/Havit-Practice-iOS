@@ -13,11 +13,6 @@ import Then
 class CategoryCVC: UICollectionViewCell {
     static let identifier = "CategoryCVC"
 
-    private let categoryView = UIView().then {
-        $0.layer.backgroundColor = UIColor(red: 0.839, green: 0.836, blue: 1, alpha: 1).cgColor
-        $0.layer.cornerRadius = 6
-    }
-
     private let categoryImageView = UIImageView().then {
         $0.image = UIImage(named: "category_icon")
     }
@@ -29,17 +24,24 @@ class CategoryCVC: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setLayouts()
+        round()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
 
+extension CategoryCVC {
     func updateData(data: Category) {
         categoryImageView.image = UIImage(named: data.categoryImageName)
         categoryTitleLabel.text = "\(data.categoryTitle)"
     }
 
+    private func round() {
+        layer.cornerRadius = 6
+        contentView.layer.cornerRadius = 6
+    }
 }
 
 extension CategoryCVC {
@@ -49,18 +51,12 @@ extension CategoryCVC {
     }
 
     private func setViewHierarchies() {
-        contentView.addSubview(categoryView)
-        categoryView.addSubview(categoryImageView)
-        categoryView.addSubview(categoryTitleLabel)
+        contentView.layer.backgroundColor = UIColor(red: 0.969, green: 0.965, blue: 1, alpha: 1).cgColor
+        contentView.addSubview(categoryImageView)
+        contentView.addSubview(categoryTitleLabel)
     }
 
     private func setConstraints() {
-        categoryView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-            $0.width.equalTo(343)
-            $0.height.equalTo(56)
-        }
-
         categoryImageView.snp.makeConstraints {
             $0.top.leading.bottom.equalToSuperview().inset(7)
         }
