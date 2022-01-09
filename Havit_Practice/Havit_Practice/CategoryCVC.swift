@@ -10,8 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
-class CategoryTVC: UITableViewCell {
-    static let identifier = "CategoryTVC"
+class CategoryCVC: UICollectionViewCell {
+    static let identifier = "CategoryCVC"
 
     private let categoryView = UIView().then {
         $0.layer.backgroundColor = UIColor(red: 0.839, green: 0.836, blue: 1, alpha: 1).cgColor
@@ -26,20 +26,13 @@ class CategoryTVC: UITableViewCell {
         $0.font = UIFont(name: "Pretendard-Medium", size: 12)
     }
 
-
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setLayouts()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 0))
     }
 
     func updateData(data: Category) {
@@ -49,7 +42,7 @@ class CategoryTVC: UITableViewCell {
 
 }
 
-extension CategoryTVC {
+extension CategoryCVC {
     private func setLayouts() {
         setViewHierarchies()
         setConstraints()

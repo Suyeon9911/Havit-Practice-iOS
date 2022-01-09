@@ -10,14 +10,20 @@ import UIKit
 import SnapKit
 import Then
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     private var categoryList: [Category] = []
 
-    private lazy var tableView = UITableView().then {
-        $0.register(CategoryTVC.self, forCellReuseIdentifier: CategoryTVC.identifier)
-        $0.separatorStyle = .none
-    }
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.register(CategoryCVC.self, forCellWithReuseIdentifier: CategoryCVC.identifier)
+        return collectionView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayouts()
@@ -33,11 +39,11 @@ class ViewController: UIViewController {
 
 extension ViewController {
     private func setDelegation() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.dragInteractionEnabled = true
-        tableView.dragDelegate = self
-        tableView.dropDelegate = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.dragInteractionEnabled = true
+        collectionView.dragDelegate = self
+        collectionView.dropDelegate = self
     }
 
     private func updateData() {
@@ -46,73 +52,84 @@ extension ViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 8
-
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 셀을 누르면 그 카테고리에 해당하는 콘텐츠뷰로 이동
-    }
-}
-
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryList.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTVC.identifier) as? CategoryTVC else {return UITableViewCell()}
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCVC.identifier, for: indexPath) as? CategoryCVC else {return UICollectionViewCell()}
 
         cell.updateData(data: categoryList[indexPath.row])
-        cell.selectionStyle = .none
         cell.backgroundColor = .clear
         return cell
     }
 
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    func collectionView(_ collectionView: UICollectionView, canHandle session: UIDropSession) -> Bool {
         return true
     }
 
-    // Swipe Right-to-left
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-            self.categoryList.remove(at: indexPath.row)
-        }
-    }
-
-    // Move Row Instance Method
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        print("\(sourceIndexPath.row) -> \(destinationIndexPath.row)")
-
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let categoryCell = self.categoryList[sourceIndexPath.row]
 
         self.categoryList.remove(at: sourceIndexPath.row)
         self.categoryList.insert(categoryCell, at: destinationIndexPath.row)
     }
-
-
 }
 
-extension ViewController: UITableViewDragDelegate {
-    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 343, height: 56)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .zero
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
+
+extension ViewController: UICollectionViewDragDelegate {
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         return [UIDragItem(itemProvider: NSItemProvider())]
     }
 }
 
-extension ViewController: UITableViewDropDelegate {
-    func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
+extension ViewController: UICollectionViewDropDelegate {
+    func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
         if session.localDragSession != nil {
-            return UITableViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+            return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
         }
-        return UITableViewDropProposal(operation: .cancel, intent: .unspecified)
+        return UICollectionViewDropProposal(operation: .cancel, intent: .unspecified)
     }
-    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) { }
+    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+
+        guard let destinationIndexPath = coordinator.destinationIndexPath else {
+            return
+        }
+
+        coordinator.items.forEach { dropItem in
+            guard let sourceIndexPath = dropItem.sourceIndexPath else { return }
+            let categoryCell = self.categoryList[sourceIndexPath.row]
+
+            collectionView.performBatchUpdates({
+                // reorder data list
+                collectionView.deleteItems(at: [sourceIndexPath])
+                collectionView.insertItems(at: [destinationIndexPath])
+                self.categoryList.remove(at: sourceIndexPath.row)
+                self.categoryList.insert(categoryCell, at: destinationIndexPath.row)
+            }, completion: { _ in
+                coordinator.drop(dropItem.dragItem, toItemAt: destinationIndexPath)
+            })
+
+        }
+    }
 
 }
 
@@ -123,12 +140,12 @@ extension ViewController {
     }
 
     func setViewHierarchies() {
-        tableView.backgroundColor = .clear
-        view.addSubview(tableView)
+        collectionView.backgroundColor = .clear
+        view.addSubview(collectionView)
     }
 
     func setConstraints() {
-        tableView.snp.makeConstraints {
+        collectionView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(148)
             $0.bottom.equalToSuperview()
             $0.leading.equalToSuperview().inset(16)
