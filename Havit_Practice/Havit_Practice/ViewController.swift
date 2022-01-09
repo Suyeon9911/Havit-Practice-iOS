@@ -27,12 +27,17 @@ class ViewController: UIViewController {
     }
 
 
+
+
 }
 
 extension ViewController {
     private func setDelegation() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.dragInteractionEnabled = true
+        tableView.dragDelegate = self
+        tableView.dropDelegate = self
     }
 
     private func updateData() {
@@ -46,9 +51,13 @@ extension ViewController: UITableViewDelegate {
         return 64
     }
 
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 8
+
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 셀 선택시 회색으로 바뀌는 효과 해제
-        tableView.deselectRow(at: indexPath, animated: true)
+        // 셀을 누르면 그 카테고리에 해당하는 콘텐츠뷰로 이동
     }
 }
 
@@ -61,9 +70,49 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTVC.identifier) as? CategoryTVC else {return UITableViewCell()}
 
         cell.updateData(data: categoryList[indexPath.row])
-        return cell 
+        cell.selectionStyle = .none
+        cell.backgroundColor = .clear
+        return cell
     }
 
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    // Swipe Right-to-left
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            self.categoryList.remove(at: indexPath.row)
+        }
+    }
+
+    // Move Row Instance Method
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        print("\(sourceIndexPath.row) -> \(destinationIndexPath.row)")
+
+        let categoryCell = self.categoryList[sourceIndexPath.row]
+
+        self.categoryList.remove(at: sourceIndexPath.row)
+        self.categoryList.insert(categoryCell, at: destinationIndexPath.row)
+    }
+
+
+}
+
+extension ViewController: UITableViewDragDelegate {
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        return [UIDragItem(itemProvider: NSItemProvider())]
+    }
+}
+
+extension ViewController: UITableViewDropDelegate {
+    func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
+        if session.localDragSession != nil {
+            return UITableViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+        }
+        return UITableViewDropProposal(operation: .cancel, intent: .unspecified)
+    }
+    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) { }
 
 }
 
@@ -74,13 +123,16 @@ extension ViewController {
     }
 
     func setViewHierarchies() {
+        tableView.backgroundColor = .clear
         view.addSubview(tableView)
     }
 
     func setConstraints() {
         tableView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(148)
-            $0.bottom.leading.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
+            $0.leading.equalToSuperview().inset(16)
+            $0.trailing.equalToSuperview().inset(16)
         }
     }
 }
