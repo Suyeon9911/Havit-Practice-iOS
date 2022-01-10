@@ -27,7 +27,9 @@
 - URLSessionUploadTask: 파일 업로드 시 사용, 사용하기 편한 request body 제공
 - URLSessionDownloadTask: 실제 파일을 다운받아 디스크에 사용될때 사용
 
-
+### 3. CollectionView Cell
+- LongPressGesture + 드래그앤드랍
+- CollectionViewCell List 공부 
 
 
 
