@@ -2,7 +2,8 @@
 해빗 연습 갈겨 💜
 
 ### 1. RxSwift   
-[RxSwift Repo 👀](https://github.com/Suyeon9911/RxSwift-Study)
+- [RxSwift Repo 👀](https://github.com/Suyeon9911/RxSwift-Study)
+- 유튜브 클론코딩을 MVVM으로 리팩토링 
 
 ### 2. URLSession + async/await
 
@@ -31,10 +32,10 @@
 - LongPressGesture + 드래그앤드랍
 - CollectionViewCell List 공부 
 
+### 4. Coordinator pattern
+- 화면 전환 시, 코디네이터 패턴 사용해보기
+
+### 5. IQKeyboardManager
+- 키보드 매니저 적용
 
 
-
----
-
-Coordinator   
-IQKeyboardManager
