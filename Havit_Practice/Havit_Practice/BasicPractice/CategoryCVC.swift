@@ -18,8 +18,15 @@ class CategoryCVC: UICollectionViewCell {
     }
 
     private let categoryTitleLabel = UILabel().then {
-        $0.font = UIFont(name: "Pretendard-Medium", size: 12)
+        $0.font = UIFont(name: "Pretendard-Medium", size: 14)
     }
+
+    private let arrowImageView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "go_gray2")
+        return image
+    }()
+
 
     override init(frame: CGRect) {
         super.init(frame: frame)
