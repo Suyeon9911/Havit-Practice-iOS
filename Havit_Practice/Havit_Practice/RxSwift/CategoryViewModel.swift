@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+
+
+class CategoryViewModel {
+    var category = [Category]()
+
+    // Networking
+}

@@ -26,6 +26,8 @@
 		4D6F9E27278B6A9500EC074D /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E1E278B6A9400EC074D /* Pretendard-Light.otf */; };
 		4D6F9E2B278C27AB00EC074D /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E2A278C27AB00EC074D /* CategoryVC.swift */; };
 		4D6F9E53278D540100EC074D /* CategorySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E52278D540100EC074D /* CategorySingleton.swift */; };
+		4D6F9E55278D57D200EC074D /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E54278D57D200EC074D /* CategoryViewModel.swift */; };
+		4D6F9E5B278D584F00EC074D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E5A278D584F00EC074D /* CategoryViewController.swift */; };
 		9C987CC6D7FED0AB92C038E5 /* Pods_Havit_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F903BA5FB4FF9DBEEAFAB9E3 /* Pods_Havit_Practice.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		4D6F9E1E278B6A9400EC074D /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		4D6F9E2A278C27AB00EC074D /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		4D6F9E52278D540100EC074D /* CategorySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySingleton.swift; sourceTree = "<group>"; };
+		4D6F9E54278D57D200EC074D /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		4D6F9E5A278D584F00EC074D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		856B7F58B5EE5E17A048D22C /* Pods-Havit_Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Havit_Practice.debug.xcconfig"; path = "Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		F903BA5FB4FF9DBEEAFAB9E3 /* Pods_Havit_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Havit_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,18 +93,17 @@
 		4D6F9DFA2788855E00EC074D /* Havit_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				4D6F9E59278D583500EC074D /* RxSwift */,
+				4D6F9E58278D581700EC074D /* BasicPractice */,
+				4D6F9E57278D57F600EC074D /* Singleton */,
+				4D6F9E56278D57E300EC074D /* CollectionViewList */,
 				4D6F9E15278B6A8600EC074D /* Fonts */,
 				4D6F9DFB2788855E00EC074D /* AppDelegate.swift */,
 				4D6F9DFD2788855E00EC074D /* SceneDelegate.swift */,
-				4D6F9DFF2788855E00EC074D /* ViewController.swift */,
 				4D6F9E012788855E00EC074D /* Main.storyboard */,
 				4D6F9E042788856100EC074D /* Assets.xcassets */,
 				4D6F9E062788856100EC074D /* LaunchScreen.storyboard */,
 				4D6F9E092788856100EC074D /* Info.plist */,
-				4D6F9E0F2788A50800EC074D /* CategoryListModel.swift */,
-				4D6F9E112788AD0700EC074D /* CategoryCVC.swift */,
-				4D6F9E2A278C27AB00EC074D /* CategoryVC.swift */,
-				4D6F9E52278D540100EC074D /* CategorySingleton.swift */,
 			);
 			path = Havit_Practice;
 			sourceTree = "<group>";
@@ -119,6 +122,41 @@
 				4D6F9E1B278B6A9300EC074D /* Pretendard-Thin.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4D6F9E56278D57E300EC074D /* CollectionViewList */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9E2A278C27AB00EC074D /* CategoryVC.swift */,
+			);
+			path = CollectionViewList;
+			sourceTree = "<group>";
+		};
+		4D6F9E57278D57F600EC074D /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9E52278D540100EC074D /* CategorySingleton.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		4D6F9E58278D581700EC074D /* BasicPractice */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9E0F2788A50800EC074D /* CategoryListModel.swift */,
+				4D6F9DFF2788855E00EC074D /* ViewController.swift */,
+				4D6F9E112788AD0700EC074D /* CategoryCVC.swift */,
+			);
+			path = BasicPractice;
+			sourceTree = "<group>";
+		};
+		4D6F9E59278D583500EC074D /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9E5A278D584F00EC074D /* CategoryViewController.swift */,
+				4D6F9E54278D57D200EC074D /* CategoryViewModel.swift */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 		50645BDA5C1F3010075E37D8 /* Pods */ = {
@@ -266,8 +304,10 @@
 				4D6F9E002788855E00EC074D /* ViewController.swift in Sources */,
 				4D6F9E53278D540100EC074D /* CategorySingleton.swift in Sources */,
 				4D6F9DFC2788855E00EC074D /* AppDelegate.swift in Sources */,
+				4D6F9E55278D57D200EC074D /* CategoryViewModel.swift in Sources */,
 				4D6F9E122788AD0700EC074D /* CategoryCVC.swift in Sources */,
 				4D6F9DFE2788855E00EC074D /* SceneDelegate.swift in Sources */,
+				4D6F9E5B278D584F00EC074D /* CategoryViewController.swift in Sources */,
 				4D6F9E102788A50800EC074D /* CategoryListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
