@@ -55,7 +55,6 @@ extension ViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCVC.identifier, for: indexPath) as? CategoryCVC else {return UICollectionViewCell()}
 
         cell.updateData(data: categoryList[indexPath.row])
-        cell.backgroundColor = .clear
         return cell
     }
 
@@ -66,6 +65,10 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let categoryItem = categoryList.remove(at: sourceIndexPath.row)
         categoryList.insert(categoryItem, at: destinationIndexPath.row)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // TODO 화면 전환 
     }
 }
 
