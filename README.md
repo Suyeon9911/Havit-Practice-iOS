@@ -1,5 +1,4 @@
 ## Havit-Practice-iOS
-해빗 연습 갈겨 💜
 
 ### 1. RxSwift   
 - [RxSwift Repo 👀](https://github.com/Suyeon9911/RxSwift-Study)
