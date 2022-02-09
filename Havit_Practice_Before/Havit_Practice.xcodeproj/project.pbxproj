@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D0AA6AD278DE05300DB763B /* CategoryEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0AA6AC278DE05200DB763B /* CategoryEditVC.swift */; };
+		4D6F9DFC2788855E00EC074D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9DFB2788855E00EC074D /* AppDelegate.swift */; };
+		4D6F9DFE2788855E00EC074D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9DFD2788855E00EC074D /* SceneDelegate.swift */; };
+		4D6F9E002788855E00EC074D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9DFF2788855E00EC074D /* ViewController.swift */; };
+		4D6F9E032788855E00EC074D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E012788855E00EC074D /* Main.storyboard */; };
+		4D6F9E052788856100EC074D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E042788856100EC074D /* Assets.xcassets */; };
+		4D6F9E082788856100EC074D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E062788856100EC074D /* LaunchScreen.storyboard */; };
+		4D6F9E102788A50800EC074D /* CategoryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E0F2788A50800EC074D /* CategoryListModel.swift */; };
+		4D6F9E122788AD0700EC074D /* CategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E112788AD0700EC074D /* CategoryCVC.swift */; };
+		4D6F9E1F278B6A9400EC074D /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E16278B6A9000EC074D /* Pretendard-SemiBold.otf */; };
+		4D6F9E20278B6A9400EC074D /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E17278B6A9000EC074D /* Pretendard-ExtraLight.otf */; };
+		4D6F9E21278B6A9400EC074D /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E18278B6A9100EC074D /* Pretendard-Regular.otf */; };
+		4D6F9E22278B6A9500EC074D /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E19278B6A9100EC074D /* Pretendard-Black.otf */; };
+		4D6F9E23278B6A9500EC074D /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E1A278B6A9200EC074D /* Pretendard-ExtraBold.otf */; };
+		4D6F9E24278B6A9500EC074D /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E1B278B6A9300EC074D /* Pretendard-Thin.otf */; };
+		4D6F9E25278B6A9500EC074D /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E1C278B6A9300EC074D /* Pretendard-Medium.otf */; };
+		4D6F9E26278B6A9500EC074D /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E1D278B6A9400EC074D /* Pretendard-Bold.otf */; };
+		4D6F9E27278B6A9500EC074D /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F9E1E278B6A9400EC074D /* Pretendard-Light.otf */; };
+		4D6F9E2B278C27AB00EC074D /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E2A278C27AB00EC074D /* CategoryVC.swift */; };
+		4D6F9E53278D540100EC074D /* CategorySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E52278D540100EC074D /* CategorySingleton.swift */; };
+		4D6F9E55278D57D200EC074D /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E54278D57D200EC074D /* CategoryViewModel.swift */; };
+		4D6F9E5B278D584F00EC074D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E5A278D584F00EC074D /* CategoryViewController.swift */; };
+		4D6F9E5D278D5B3400EC074D /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F9E5C278D5B3400EC074D /* CategoryListViewModel.swift */; };
+		9C987CC6D7FED0AB92C038E5 /* Pods_Havit_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F903BA5FB4FF9DBEEAFAB9E3 /* Pods_Havit_Practice.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01C1DAF7E1380EDF9FCEB199 /* Pods-Havit_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Havit_Practice.release.xcconfig"; path = "Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice.release.xcconfig"; sourceTree = "<group>"; };
+		4D0AA6AC278DE05200DB763B /* CategoryEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEditVC.swift; sourceTree = "<group>"; };
+		4D6F9DF82788855E00EC074D /* Havit_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Havit_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D6F9DFB2788855E00EC074D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D6F9DFD2788855E00EC074D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4D6F9DFF2788855E00EC074D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D6F9E022788855E00EC074D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D6F9E042788856100EC074D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D6F9E072788856100EC074D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D6F9E092788856100EC074D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D6F9E0F2788A50800EC074D /* CategoryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListModel.swift; sourceTree = "<group>"; };
+		4D6F9E112788AD0700EC074D /* CategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCVC.swift; sourceTree = "<group>"; };
+		4D6F9E16278B6A9000EC074D /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		4D6F9E17278B6A9000EC074D /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		4D6F9E18278B6A9100EC074D /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		4D6F9E19278B6A9100EC074D /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		4D6F9E1A278B6A9200EC074D /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		4D6F9E1B278B6A9300EC074D /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		4D6F9E1C278B6A9300EC074D /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		4D6F9E1D278B6A9400EC074D /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		4D6F9E1E278B6A9400EC074D /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		4D6F9E2A278C27AB00EC074D /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		4D6F9E52278D540100EC074D /* CategorySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySingleton.swift; sourceTree = "<group>"; };
+		4D6F9E54278D57D200EC074D /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		4D6F9E5A278D584F00EC074D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		4D6F9E5C278D5B3400EC074D /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
+		856B7F58B5EE5E17A048D22C /* Pods-Havit_Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Havit_Practice.debug.xcconfig"; path = "Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice.debug.xcconfig"; sourceTree = "<group>"; };
+		F903BA5FB4FF9DBEEAFAB9E3 /* Pods_Havit_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Havit_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D6F9DF52788855E00EC074D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C987CC6D7FED0AB92C038E5 /* Pods_Havit_Practice.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D6F9DEF2788855E00EC074D = {
+			isa = PBXGroup;
+			children = (
+				4D6F9DFA2788855E00EC074D /* Havit_Practice */,
+				4D6F9DF92788855E00EC074D /* Products */,
+				50645BDA5C1F3010075E37D8 /* Pods */,
+				F866F173136ED444DA6DDA50 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D6F9DF92788855E00EC074D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9DF82788855E00EC074D /* Havit_Practice.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D6F9DFA2788855E00EC074D /* Havit_Practice */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9E59278D583500EC074D /* RxSwift */,
+				4D6F9E58278D581700EC074D /* BasicPractice */,
+				4D6F9E57278D57F600EC074D /* Singleton */,
+				4D6F9E56278D57E300EC074D /* CollectionViewList */,
+				4D6F9E15278B6A8600EC074D /* Fonts */,
+				4D6F9DFB2788855E00EC074D /* AppDelegate.swift */,
+				4D6F9DFD2788855E00EC074D /* SceneDelegate.swift */,
+				4D6F9E012788855E00EC074D /* Main.storyboard */,
+				4D6F9E042788856100EC074D /* Assets.xcassets */,
+				4D6F9E062788856100EC074D /* LaunchScreen.storyboard */,
+				4D6F9E092788856100EC074D /* Info.plist */,
+			);
+			path = Havit_Practice;
+			sourceTree = "<group>";
+		};
+		4D6F9E15278B6A8600EC074D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9E19278B6A9100EC074D /* Pretendard-Black.otf */,
+				4D6F9E1D278B6A9400EC074D /* Pretendard-Bold.otf */,
+				4D6F9E1A278B6A9200EC074D /* Pretendard-ExtraBold.otf */,
+				4D6F9E17278B6A9000EC074D /* Pretendard-ExtraLight.otf */,
+				4D6F9E1E278B6A9400EC074D /* Pretendard-Light.otf */,
+				4D6F9E1C278B6A9300EC074D /* Pretendard-Medium.otf */,
+				4D6F9E18278B6A9100EC074D /* Pretendard-Regular.otf */,
+				4D6F9E16278B6A9000EC074D /* Pretendard-SemiBold.otf */,
+				4D6F9E1B278B6A9300EC074D /* Pretendard-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4D6F9E56278D57E300EC074D /* CollectionViewList */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9E2A278C27AB00EC074D /* CategoryVC.swift */,
+			);
+			path = CollectionViewList;
+			sourceTree = "<group>";
+		};
+		4D6F9E57278D57F600EC074D /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9E52278D540100EC074D /* CategorySingleton.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		4D6F9E58278D581700EC074D /* BasicPractice */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9E0F2788A50800EC074D /* CategoryListModel.swift */,
+				4D6F9DFF2788855E00EC074D /* ViewController.swift */,
+				4D6F9E112788AD0700EC074D /* CategoryCVC.swift */,
+				4D0AA6AC278DE05200DB763B /* CategoryEditVC.swift */,
+			);
+			path = BasicPractice;
+			sourceTree = "<group>";
+		};
+		4D6F9E59278D583500EC074D /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F9E5A278D584F00EC074D /* CategoryViewController.swift */,
+				4D6F9E54278D57D200EC074D /* CategoryViewModel.swift */,
+				4D6F9E5C278D5B3400EC074D /* CategoryListViewModel.swift */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		50645BDA5C1F3010075E37D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				856B7F58B5EE5E17A048D22C /* Pods-Havit_Practice.debug.xcconfig */,
+				01C1DAF7E1380EDF9FCEB199 /* Pods-Havit_Practice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F866F173136ED444DA6DDA50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F903BA5FB4FF9DBEEAFAB9E3 /* Pods_Havit_Practice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D6F9DF72788855E00EC074D /* Havit_Practice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D6F9E0C2788856100EC074D /* Build configuration list for PBXNativeTarget "Havit_Practice" */;
+			buildPhases = (
+				D3A032483F67D21FC8E59B88 /* [CP] Check Pods Manifest.lock */,
+				4D6F9DF42788855E00EC074D /* Sources */,
+				4D6F9DF52788855E00EC074D /* Frameworks */,
+				4D6F9DF62788855E00EC074D /* Resources */,
+				06539CED9AE7CA48A7FB068F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Havit_Practice;
+			productName = Havit_Practice;
+			productReference = 4D6F9DF82788855E00EC074D /* Havit_Practice.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D6F9DF02788855E00EC074D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					4D6F9DF72788855E00EC074D = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 4D6F9DF32788855E00EC074D /* Build configuration list for PBXProject "Havit_Practice" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D6F9DEF2788855E00EC074D;
+			productRefGroup = 4D6F9DF92788855E00EC074D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D6F9DF72788855E00EC074D /* Havit_Practice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D6F9DF62788855E00EC074D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D6F9E27278B6A9500EC074D /* Pretendard-Light.otf in Resources */,
+				4D6F9E20278B6A9400EC074D /* Pretendard-ExtraLight.otf in Resources */,
+				4D6F9E26278B6A9500EC074D /* Pretendard-Bold.otf in Resources */,
+				4D6F9E24278B6A9500EC074D /* Pretendard-Thin.otf in Resources */,
+				4D6F9E082788856100EC074D /* LaunchScreen.storyboard in Resources */,
+				4D6F9E23278B6A9500EC074D /* Pretendard-ExtraBold.otf in Resources */,
+				4D6F9E052788856100EC074D /* Assets.xcassets in Resources */,
+				4D6F9E1F278B6A9400EC074D /* Pretendard-SemiBold.otf in Resources */,
+				4D6F9E21278B6A9400EC074D /* Pretendard-Regular.otf in Resources */,
+				4D6F9E22278B6A9500EC074D /* Pretendard-Black.otf in Resources */,
+				4D6F9E032788855E00EC074D /* Main.storyboard in Resources */,
+				4D6F9E25278B6A9500EC074D /* Pretendard-Medium.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06539CED9AE7CA48A7FB068F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Havit_Practice/Pods-Havit_Practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3A032483F67D21FC8E59B88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Havit_Practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D6F9DF42788855E00EC074D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D6F9E2B278C27AB00EC074D /* CategoryVC.swift in Sources */,
+				4D0AA6AD278DE05300DB763B /* CategoryEditVC.swift in Sources */,
+				4D6F9E002788855E00EC074D /* ViewController.swift in Sources */,
+				4D6F9E53278D540100EC074D /* CategorySingleton.swift in Sources */,
+				4D6F9DFC2788855E00EC074D /* AppDelegate.swift in Sources */,
+				4D6F9E5D278D5B3400EC074D /* CategoryListViewModel.swift in Sources */,
+				4D6F9E55278D57D200EC074D /* CategoryViewModel.swift in Sources */,
+				4D6F9E122788AD0700EC074D /* CategoryCVC.swift in Sources */,
+				4D6F9DFE2788855E00EC074D /* SceneDelegate.swift in Sources */,
+				4D6F9E5B278D584F00EC074D /* CategoryViewController.swift in Sources */,
+				4D6F9E102788A50800EC074D /* CategoryListModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D6F9E012788855E00EC074D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D6F9E022788855E00EC074D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D6F9E062788856100EC074D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D6F9E072788856100EC074D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D6F9E0A2788856100EC074D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D6F9E0B2788856100EC074D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D6F9E0D2788856100EC074D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856B7F58B5EE5E17A048D22C /* Pods-Havit_Practice.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2NP7U5487;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Havit_Practice/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sutori.Havit-Practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D6F9E0E2788856100EC074D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C1DAF7E1380EDF9FCEB199 /* Pods-Havit_Practice.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2NP7U5487;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Havit_Practice/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sutori.Havit-Practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D6F9DF32788855E00EC074D /* Build configuration list for PBXProject "Havit_Practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D6F9E0A2788856100EC074D /* Debug */,
+				4D6F9E0B2788856100EC074D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D6F9E0C2788856100EC074D /* Build configuration list for PBXNativeTarget "Havit_Practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D6F9E0D2788856100EC074D /* Debug */,
+				4D6F9E0E2788856100EC074D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D6F9DF02788855E00EC074D /* Project object */;
+}
